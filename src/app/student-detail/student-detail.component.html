@@ -1,0 +1,26 @@
+<div *ngIf="student">
+	<h2>{{student.name | uppercase}} Details</h2>
+	<div><span>id: </span>{{student._id}}</div>
+	<div>
+	  <label>name:
+	    <input [(ngModel)]="student.name" placeholder="name">
+	  </label>
+	</div>
+
+<dl class="list">
+    <dt>ID</dt>
+    <dd>{{ student._id }}</dd>
+    <dt>Subject</dt>
+    <dd>{{ student.subject }}</dd>
+    <dt>Description</dt>
+    <dd>{{ student.description }}</dd>
+    <dt>Join Year</dt>
+    <dd>{{ student.join_year }}</dd>
+    <dt>Address</dt>
+    <dd>{{ student.street }}</dd><dd>{{ student.state }}</dd>
+    <dt>Update Date</dt>
+    <dd>{{ student.updated_date }}</dd>
+  </dl>
+	<button (click)="goBack()">go back</button>
+	<button (click)="save()">save</button>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Student List</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Subject</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <ul class="students">
+  <li *ngFor = "let student of students">
+	<a routerLink="/detail/{{student._id}}">
+    <span class="badge">{{student._id}}</span> {{student.name}}{{student.subject}}{{student.description}}
+	</a>
+	<button class="delete" title="delete student"
+      (click)="delete(student)">x</button>
+  </li>
+</ul>
+  </table>
+</div>
